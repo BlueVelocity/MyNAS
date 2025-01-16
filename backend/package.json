@@ -2,13 +2,24 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Backend of MyNAS",
-  "main": "app.js",
+  "type": "module",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/server.js"
   },
   "author": "Joseph Monighan",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^15.14.0",
+    "prettier": "3.4.2",
+    "typescript-eslint": "^8.20.0"
   }
 }
