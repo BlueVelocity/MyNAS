@@ -1,9 +1,8 @@
 import express from "express";
-const app = express();
+const server = express();
 const port = 5000;
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-});
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+import loginPage from "./routes/login.js";
+server.use('/', loginPage);
+server.listen(port, () => {
+    console.log(`Example server listening on port ${port}`);
 });
