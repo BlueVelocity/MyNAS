@@ -5,13 +5,16 @@ FROM node:16
 WORKDIR /backend
 
 # Copy package.json and install dependencies
-COPY package.json ./
-RUN npm install
+COPY backend/package.json ./
 
 # Copy the transpiled backend code
-COPY dist ./dist 
+COPY backend/ . 
 # Copy frontend dist code
-# COPY ../frontend/dist .
+COPY frontend/dist/* ./frontend
+
+RUN npm install
+RUN npm run transpile
+
 
 # Expose the backend port
 EXPOSE 5000
