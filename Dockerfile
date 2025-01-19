@@ -2,19 +2,13 @@
 FROM node:16
 
 # Set working directory inside the container
-WORKDIR /backend
+WORKDIR .
 
 # Copy package.json and install dependencies
-COPY backend/package.json ./
-
-# Copy the transpiled backend code
-COPY backend/ . 
-# Copy frontend dist code
-COPY frontend/dist/* ./frontend
+COPY backend/ .
 
 RUN npm install
 RUN npm run transpile
-
 
 # Expose the backend port
 EXPOSE 5000

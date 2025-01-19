@@ -1,5 +1,6 @@
 import express from 'express';
-import path from 'path';
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
 const router = express.Router();
 const login = (req, res, next) => {
     console.log('Please login', Date.now());
@@ -7,6 +8,6 @@ const login = (req, res, next) => {
 };
 router.use(login);
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "/frontend/index.html"));
+    res.sendFile("/frontend/index.html");
 });
 export default router;

@@ -1,5 +1,5 @@
 import './App.css'
-import ButtonAppBar from './components/ButtonAppBar.js'
+import ButtonAppBar from './components/ButtonAppBar.tsx'
 
 function App() {
 
