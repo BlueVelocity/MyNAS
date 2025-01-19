@@ -1,11 +1,19 @@
 # Use official Node.js image as base
-FROM node:16
+FROM node:18
 
 # Set working directory inside the container
 WORKDIR .
 
 # Copy package.json and install dependencies
-COPY backend/ .
+COPY backend/ ./backend
+COPY frontend/ ./frontend
+
+WORKDIR ./frontend
+
+RUN npm install
+RUN npm run build
+
+WORKDIR ../backend
 
 RUN npm install
 RUN npm run transpile

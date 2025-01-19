@@ -5,7 +5,7 @@ const port = 5000;
 
 import loginPage from "./routes/login.js";
 
-server.use(express.static("/dist/static"))
+server.use(express.static("/frontend/dist/"))
 
 server.use('/', loginPage);
 

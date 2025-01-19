@@ -10,7 +10,7 @@ const login = (req: any, res: any, next: any) => {
 router.use(login);
 
 router.get('/', (req: any, res: any) => {
-  res.sendFile("/static/index.html")
+  res.sendFile("index.html")
 })
 
 export default router

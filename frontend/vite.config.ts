@@ -7,8 +7,4 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'] // Add this if not present
   },
-  build: {
-    outDir: '../backend/dist/static',
-    emptyOutDir: true, // also necessary
-  }
 })
