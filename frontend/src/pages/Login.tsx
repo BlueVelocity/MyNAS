@@ -1,7 +1,9 @@
-export default function Login() {
-  return (
-    <>
+import "../styles/Login.css"
 
-    </>
+export default function LoginForm() {
+  return (
+    <div>
+
+    </div>
   )
 }
